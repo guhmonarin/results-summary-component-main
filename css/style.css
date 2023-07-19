@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients*/
+
+    --Light-slate-blue: hsl(252, 100%, 67%); /* background*/
+    --Light-royal-blue: hsl(241, 81%, 54%); /* background*/
+
+    --Violet-blue: hsla(256, 72%, 46%, 1); /* circle*/
+    --Persian-blue: hsla(241, 72%, 46%, 0); /* circle*/
+
+    /*Neutral*/
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --font-primary: 'Hanken Grotesk', sans-serif;
+    }
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 18px;
+    font-family: var(--font-primary);
+}
+
+.result {
+    background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 0 0 20px 20px;
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.result-tittle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Light-lavender);
+    
+}
+
+.result-value {
+    background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+
+.result-value-main {
+    color: var(--White);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.result-value-secondary {
+    color: var(--Light-lavender);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.result-info {
+    padding: 0 16px;
+}
+
+.result-info h3 {
+    color: var(--White);
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding-bottom: 16px;
+}
+
+.result-info p {
+    color: var(--Light-lavender);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.summary {
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.summary-info-value-strong {
+    font-weight: 800;
+}
+
+.summary-info.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary-info-reaction {
+    color: var(--Light-red);
+}
+
+.summary-info-reaction::before {
+    content: url(../assets/images/icon-reaction.svg);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+.summary-info.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary-info-memory {
+    color: var(--Orangey-yellow);
+}
+
+.summary-info-memory::before {
+    content: url(../assets/images/icon-memory.svg);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+.summary-info.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary-info-verbal {
+    color:var(--Green-teal)
+}
+
+.summary-info-verbal::before {
+    content: url(../assets/images/icon-verbal.svg);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+.summary-info.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary-info-visual {
+    color: var(--Cobalt-blue);
+}
+
+.summary-info-visual::before {
+    content: url(../assets/images/icon-visual.svg);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+.continue {
+    border-radius: 40px;
+    padding: 16px 0;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White); 
+    font-size: 1rem;
+    border: none;
+}
+
+
+.attribution { 
+    font-size: 0.61rem; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 1000px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .result {
+        height: 375px;
+        width: 250px;
+        border-radius: 20px;
+        justify-content: space-between;
+    }
+
+    .summary {
+        height: 375px;
+        width: 250px;
+    }
+}
